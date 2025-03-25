@@ -1,0 +1,463 @@
+:root {
+  --primary-color: #000000; /* Apple Black */
+  --secondary-color: #0071e3; /* Apple Blue */
+  --accent-color-1: #86868b; /* Apple Gray */
+  --accent-color-2: #f5f5f7; /* Apple Light Gray */
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --background: #ffffff;
+  --surface: #f5f5f7;
+  --divider: #d2d2d7;
+  --error: #ff3b30;
+  --success: #34c759;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--background);
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.coming-soon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 2rem;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.logo h1 {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.05em;
+}
+
+.logo span {
+  color: var(--secondary-color);
+}
+
+.content {
+  max-width: 980px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 6rem;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+
+.product-description {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.product-description h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  text-align: center;
+  letter-spacing: -0.05em;
+}
+
+.product-description > p {
+  font-size: 1.25rem;
+  line-height: 1.47059;
+  color: var(--text-secondary);
+  margin-bottom: 3.5rem;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+
+.description-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.description-item {
+  background-color: var(--background);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--accent-color-2);
+  margin-bottom: 1.5rem;
+}
+
+.icon-container i {
+  font-size: 28px;
+  color: var(--secondary-color);
+}
+
+.description-item h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  letter-spacing: -0.022em;
+}
+
+.description-item p {
+  font-size: 1.0625rem;
+  line-height: 1.47059;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+
+.key-benefits {
+  background-color: var(--background);
+  border-radius: 18px;
+  padding: 3rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 4rem;
+}
+
+.key-benefits h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.05em;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.benefits-list i {
+  color: var(--secondary-color);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.benefits-list span {
+  font-size: 1.0625rem;
+  line-height: 1.47059;
+  color: var(--text-primary);
+  letter-spacing: -0.022em;
+}
+
+.notification-form {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+  max-width: 600px;
+  padding: 3rem;
+  border-radius: 18px;
+  background-color: var(--background);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.cta-container {
+  margin: 4rem auto;
+  text-align: center;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tally-popup {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 980px;
+  padding: 0 32px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  letter-spacing: -0.01em;
+  width: auto;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.tally-popup:hover {
+  background-color: #0062c3;
+  transform: scale(1.02);
+}
+
+.tally-popup:active {
+  transform: scale(0.98);
+}
+
+.cta-subtext {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+}
+
+.notification-form h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  letter-spacing: -0.05em;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-container {
+  position: relative;
+  flex-grow: 1;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  background-color: var(--background);
+  transition: border-color 0.3s;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
+}
+
+.input-container label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.8);
+  background-color: var(--background);
+  padding: 0 8px;
+}
+
+.btn-notify {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  transition: background-color 0.3s;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+}
+
+.btn-notify:hover {
+  background-color: #0062c3;
+}
+
+.form-message {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  height: 20px;
+}
+
+.form-message.error {
+  color: var(--error);
+}
+
+.form-message.success {
+  color: var(--success);
+}
+
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: none;
+}
+
+footer {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--divider);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .description-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-description h2 {
+    font-size: 2rem;
+  }
+  
+  .product-description > p {
+    font-size: 1.125rem;
+  }
+  
+  .notification-form {
+    padding: 2rem;
+  }
+  
+  .form-group {
+    flex-direction: column;
+  }
+  
+  .btn-notify {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-container {
+    padding: 1.5rem;
+  }
+  
+  .logo h1 {
+    font-size: 2rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .product-description {
+    margin: 2rem 0;
+  }
+  
+  .description-item {
+    padding: 1.5rem;
+  }
+  
+  .key-benefits {
+    padding: 1.5rem;
+  }
+  
+  .icon-container {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .icon-container i {
+    font-size: 24px;
+  }
+  
+  .notification-form {
+    padding: 1.5rem;
+  }
+  
+  .notification-form h2 {
+    font-size: 1.5rem;
+  }
+}
